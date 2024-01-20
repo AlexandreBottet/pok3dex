@@ -1,0 +1,28 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #C03F40;
+    background-color: #EFE2E3;
+    border-radius: 25px;
+    padding: 1.3rem 1rem;
+}
+
+h1 {
+    font-size: 1.7rem;
+    font-weight: 700;
+}
+
+ul {
+    display: flex;
+    gap: 0.5rem;
+}
+
+li {
+    font-weight: bold;
+}
+
+a {
+    text-decoration: none;
+    color: #C03F40;
+}
