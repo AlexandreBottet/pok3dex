@@ -3,6 +3,11 @@
     src: url('./assets/fonts/BreeSerif-Regular.ttf') format('truetype');
 }
 
+body {
+    background-color: #C03F40;
+}
+
 #root {
     font-family: 'Bree Serif', sans-serif;
+    margin: 0.8rem 1.5rem;
 }
