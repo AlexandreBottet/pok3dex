@@ -1,1 +1,8 @@
+@font-face {
+    font-family: 'Bree Serif';
+    src: url('./assets/fonts/BreeSerif-Regular.ttf') format('truetype');
+}
 
+#root {
+    font-family: 'Bree Serif', sans-serif;
+}
