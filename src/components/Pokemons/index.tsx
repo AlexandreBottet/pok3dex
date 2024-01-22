@@ -1,3 +1,5 @@
+import Pokemon from './Pokemon';
+
 import { PokemonList } from '../../types';
 import './Pokemons.css';
 
@@ -9,10 +11,7 @@ const Pokemons = ({ pokemons }: Props) => {
     return (
          <div className="pokemons">
             {pokemons.map(pokemon => (
-                <div key={pokemon.id} className='pokemons_card'>
-                    <img className='pokemons_card_picture' src={pokemon.image} alt={pokemon.name} />
-                    <h2 className='pokemons_card_name'>#{pokemon.id} {pokemon.name}</h2>
-                </div>
+                <Pokemon key={pokemon.id} pokemon={pokemon} />
             ))}
          </div>
     );
