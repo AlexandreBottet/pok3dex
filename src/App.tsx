@@ -1,8 +1,9 @@
-import axios from 'axios';
 import { useState, useEffect } from 'react';
 
 import Header from './components/Header';
-import Pokemons from './components/Pokemons/Index';
+import Pokemons from './components/Pokemons';
+
+import pokemonService from './services/pokemonService';
 
 import { PokemonList } from './types';
 
@@ -12,11 +13,16 @@ const App = () => {
   const [pokemons, setPokemons] = useState<PokemonList[]>([]);
 
   useEffect(() => {
-    axios
-      .get('https://pokebuildapi.fr/api/v1/pokemon/generation/1')
-      .then(response => {
-        setPokemons(response.data);
-      });
+    const fetchPokemons = async () => {
+      try {
+        const pokemons = await pokemonService.getAll();
+        setPokemons(pokemons);
+      } catch (error) {
+        console.error('Error fetching pokemons:', error);
+      }
+    };
+
+    fetchPokemons();
   }, []);
 
   return (
