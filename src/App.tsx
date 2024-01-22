@@ -11,6 +11,7 @@ import './App.css';
 
 const App = () => {
   const [pokemons, setPokemons] = useState<PokemonList[]>([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchPokemons = async () => {
@@ -19,6 +20,8 @@ const App = () => {
         setPokemons(pokemons);
       } catch (error) {
         console.error('Error fetching pokemons:', error);
+      } finally {
+        setLoading(false);
       }
     };
 
@@ -28,7 +31,7 @@ const App = () => {
   return (
     <>
       <Header />
-      <Pokemons pokemons={pokemons} />
+      <Pokemons pokemons={pokemons} loading={loading} />
     </>
   );
 };
