@@ -1,7 +1,9 @@
 import { useState, useEffect } from 'react';
+import { Routes, Route } from 'react-router-dom';
 
 import Header from './components/Header';
 import Pokemons from './components/Pokemons';
+import PokemonDetails from './components/Pokemons/Pokemon/PokemonDetails';
 
 import pokemonService from './services/pokemonService';
 
@@ -30,8 +32,11 @@ const App = () => {
 
   return (
     <>
-      <Header />
-      <Pokemons pokemons={pokemons} loading={loading} />
+       <Header />
+       <Routes>
+          <Route path='/pokemon/:id' element={<PokemonDetails />} />
+          <Route path='/' element={<Pokemons pokemons={pokemons} loading={loading} />} />
+       </Routes>
     </>
   );
 };

@@ -1,6 +1,7 @@
 import Pokemon from './Pokemon';
 
 import { PokemonList } from '../../types';
+
 import './Pokemons.css';
 
 interface Props {
