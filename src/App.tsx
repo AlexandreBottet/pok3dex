@@ -16,7 +16,7 @@ const App = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const fetchPokemons = async () => {
+    const getPokemons = async () => {
       try {
         const pokemons = await pokemonService.getAll();
         setPokemons(pokemons);
@@ -27,7 +27,7 @@ const App = () => {
       }
     };
 
-    fetchPokemons();
+    getPokemons();
   }, []);
 
   return (

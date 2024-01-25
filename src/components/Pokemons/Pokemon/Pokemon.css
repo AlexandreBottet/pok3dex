@@ -1,0 +1,13 @@
+.pokemons_card {
+    background-color: #982B2B;
+    border-radius: 50px;
+    padding: 1rem;
+    color: #EFE2E3;
+    text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+    .pokemons_card {
+        width: 30vw;
+    }
+}

@@ -1,0 +1,152 @@
+.pokemon-details {
+    color: #EFE2E3;
+    margin-top: 2rem;
+}
+
+.pokemon-details__title {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.pokemon-details__description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.5rem;
+    background-color: #AB3737;
+    border-radius: 15px;
+}
+
+.pokemon-details__name {
+    font-size: larger;
+}
+
+.pokemon-details__types {
+    display: flex;
+    gap: 1rem;
+    padding: 0.5rem;
+}
+
+.pokemon-details__types-item {
+    padding: 0.5rem;
+    border-radius: 5px;
+}
+
+.pokemon-details__stats-title {
+    font-size: large;
+    padding: 1rem;
+    text-align: center;
+    text-decoration: underline;
+    border-top: 6px solid;
+}
+
+.pokemon-details__stat {
+    display: flex;
+    justify-content: space-between;
+    width: 60vw;
+    margin-bottom: 0.5rem;
+}
+
+/* Chaque type possède sa couleur */
+
+.acier {
+    background-color: #AAAABB;
+}
+
+.combat {
+    background-color: #BA5544;
+}
+
+.dragon {
+    background-color: #7666EE;
+}
+
+.eau {
+    background-color: #3399FE;
+}
+
+.électrik {
+    background-color: #FFBB32;
+}
+
+.feu {
+    background-color: #FF4422;
+}
+
+.glace {
+    background-color: #76DDFF;
+}
+
+.insecte {
+    background-color: #AABA23;
+}
+
+.normal {
+    background-color: #BBAABB;
+}
+
+.plante {
+    background-color: #76CC55;
+}
+
+.poison {
+    background-color: #AA5599;
+}
+
+.psy {
+    background-color: #FF5599;
+}
+
+.roche {
+    background-color: #BBAA66;
+}
+
+.sol {
+    background-color: #DDBB54;
+}
+
+.spectre {
+    background-color: #6666BA;
+}
+
+.ténèbres {
+    background-color: #655544;
+}
+
+.vol {
+    background-color: #6599FF;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .pokemon-details__title {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+    .pokemon-details__content {
+        display: flex;
+        justify-content: space-around;
+        padding: 1rem;
+    }
+    .pokemon-details__picture {
+        width: 45vw;
+    }
+    .pokemon-details__stat {
+        width: 36vw;
+    }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1440px) {
+    .pokemon-details__content {
+        display: flex;
+        justify-content: space-around;
+        padding: 1rem;
+    }
+    .pokemon-details__description {
+        justify-content: center;
+    }
+    .pokemon-detail__stat {
+        width: 24vw;
+    }
+}
