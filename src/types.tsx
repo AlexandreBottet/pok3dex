@@ -16,5 +16,6 @@ export interface PokemonProfil {
 export type PokemonList = Pick <PokemonProfil, "id" | "image" | "name">
 
 export interface Types {
+    id: number;
     name: string;
 }

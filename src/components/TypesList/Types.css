@@ -1,0 +1,20 @@
+p {
+    color: #EFE2E3;
+    text-align: center;
+    padding: 1rem;
+}
+
+.types {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    color: #EFE2E3;
+}
+
+.type {
+    border-radius: 10px;
+    padding: 1rem;
+}

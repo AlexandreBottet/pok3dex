@@ -4,6 +4,7 @@ import { Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Pokemons from './components/Pokemons';
 import PokemonDetails from './components/Pokemons/Pokemon/PokemonDetails';
+import TypesList from './components/TypesList';
 
 import pokemonService from './services/pokemonService';
 
@@ -35,6 +36,7 @@ const App = () => {
        <Header />
        <Routes>
           <Route path='/pokemon/:id' element={<PokemonDetails />} />
+          <Route path='/types' element={<TypesList />} />
           <Route path='/' element={<Pokemons pokemons={pokemons} loading={loading} />} />
        </Routes>
     </>
