@@ -13,7 +13,7 @@ export interface PokemonProfil {
     apiTypes: Types[];
 }
 
-export type PokemonList = Pick <PokemonProfil, "id" | "image" | "name">
+export type PokemonWithoutDetails = Pick <PokemonProfil, "id" | "image" | "name">
 
 export interface Types {
     id: number;

@@ -1,11 +1,11 @@
 import Pokemon from './Pokemon';
 
-import { PokemonList } from '../../types';
+import { PokemonWithoutDetails } from '../../types';
 
 import './Pokemons.css';
 
 interface Props {
-    pokemons: PokemonList[],
+    pokemons: PokemonWithoutDetails[],
     loading: boolean
 }
 

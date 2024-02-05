@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
 
-import { PokemonList } from "../../../types";
+import { PokemonWithoutDetails } from "../../../types";
 
 import './Pokemon.css';
 
 interface Props {
-    pokemon: PokemonList
+    pokemon: PokemonWithoutDetails
 }
 
 const Pokemon = ({ pokemon }: Props) => {

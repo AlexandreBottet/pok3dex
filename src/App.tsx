@@ -8,12 +8,12 @@ import TypesList from './components/TypesList';
 
 import pokemonService from './services/pokemonService';
 
-import { PokemonList } from './types';
+import { PokemonWithoutDetails } from './types';
 
 import './App.css';
 
 const App = () => {
-  const [pokemons, setPokemons] = useState<PokemonList[]>([]);
+  const [pokemons, setPokemons] = useState<PokemonWithoutDetails[]>([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
