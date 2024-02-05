@@ -1,35 +1,15 @@
-import { useState, useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
 
+import Home from './pages/Home';
+
 import Header from './components/Header';
-import Pokemons from './components/Pokemons';
-import PokemonDetails from './components/Pokemons/Pokemon/PokemonDetails';
+import PokemonDetails from './pages/PokemonDetails';
 import TypesList from './components/TypesList';
-
-import pokemonService from './services/pokemonService';
-
-import { PokemonWithoutDetails } from './types';
 
 import './App.css';
 
+
 const App = () => {
-  const [pokemons, setPokemons] = useState<PokemonWithoutDetails[]>([]);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    const getPokemons = async () => {
-      try {
-        const pokemons = await pokemonService.getAll();
-        setPokemons(pokemons);
-      } catch (error) {
-        console.error('Error fetching pokemons:', error);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    getPokemons();
-  }, []);
 
   return (
     <>
@@ -37,7 +17,7 @@ const App = () => {
        <Routes>
           <Route path='/pokemon/:id' element={<PokemonDetails />} />
           <Route path='/types' element={<TypesList />} />
-          <Route path='/' element={<Pokemons pokemons={pokemons} loading={loading} />} />
+          <Route path='/' element={<Home />} />
        </Routes>
     </>
   );

@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
-import { PokemonProfil } from "../../../../types";
+import { PokemonProfil } from "../../types";
 
-import pokemonService from "../../../../services/pokemonService";
+import pokemonService from "../../services/pokemonService";
 
 import './PokemonDetails.css';
 
